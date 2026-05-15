@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #f9f9ff;
+  --color-surface-dim: #cadbfc;
+  --color-surface-bright: #f9f9ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f0f3ff;
+  --color-surface-container: #e7eeff;
+  --color-surface-container-high: #dfe8ff;
+  --color-surface-container-highest: #d6e3ff;
+  
+  --color-on-surface: #091c35;
+  --color-on-surface-variant: #424656;
+  --color-inverse-surface: #20314b;
+  --color-inverse-on-surface: #ecf0ff;
+  
+  --color-outline: #727687;
+  --color-outline-variant: #c2c6d8;
+  
+  --color-primary: #0050cb;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0066ff;
+  --color-on-primary-container: #f8f7ff;
+  --color-inverse-primary: #b3c5ff;
+  
+  --color-secondary: #006c46;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #58feb3;
+  --color-on-secondary-container: #00734b;
+  
+  --color-tertiary: #725500;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #916c00;
+  --color-on-tertiary-container: #fff7ee;
+  
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface antialiased font-sans;
+  }
+}
+
+.ai-gradient {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+}
+
+.glass-tag {
+  @apply bg-white/85 backdrop-blur-md border border-white/30;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-outline-variant/30 rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-outline-variant;
+}
