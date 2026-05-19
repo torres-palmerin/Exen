@@ -25,7 +25,7 @@ export interface Invoice {
 
 export interface FiscalProfile {
   rfc: string;
-  regime: string;
+  razonSocial: string;
+  regimeFiscal: string;
   cp: string;
-  activity: string;
 }

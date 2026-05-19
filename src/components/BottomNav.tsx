@@ -16,7 +16,7 @@ export function BottomNav({ currentScreen, onNavigate }: BottomNavProps) {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter pb-6 pt-2 bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-t-xl md:hidden">
+    <nav className="fixed bottom-[max(0.5rem,env(safe-area-inset-bottom))] left-1/2 z-50 w-[calc(100%-1rem)] max-w-md -translate-x-1/2 flex justify-around items-center px-2 py-2 bg-surface-container-lowest shadow-[0_-4px_12px_rgba(0,0,0,0.05)] rounded-2xl border border-surface-container-high md:hidden">
       {tabs.map((tab) => {
         const isActive = currentScreen === tab.screen;
         const Icon = tab.icon;
